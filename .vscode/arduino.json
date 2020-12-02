@@ -1,0 +1,5 @@
+{
+    "board": "arduino:avr:uno",
+    "sketch": "ray_face\\ray_face.ino",
+    "port": "COM3"
+}

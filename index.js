@@ -16,11 +16,24 @@ app.get('/smiley', (req, res) => {
 	res.send(':]')
 })
 
+app.get('/blink', (req, res) => {
+	console.log('blink')
+	sp.write('1')
+	res.send('b')
+})
+
+app.get('/meh', (req, res) => {
+	console.log('meh')
+	sp.write('l')
+	res.send(':|')
+})
+
 app.get('/sad', (req, res) => {
 	sp.write('s')
 	console.log('sad')
 	res.send('[:')
 })
+
 app.get('/uwu', (req, res) => {
 	sp.write('b')
 	console.log('UwU')
