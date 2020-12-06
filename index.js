@@ -84,6 +84,23 @@ app.get('/sad', (req, res) => {
 	res.send('[:')
 })
 
+app.get('/4', (req, res) => {
+	sp.write('4')
+	console.log('4')
+	res.send('4')
+})
+app.get('/3', (req, res) => {
+	sp.write('3')
+	console.log('3')
+	res.send('3')
+})
+app.get('/2', (req, res) => {
+	sp.write('2')
+	console.log('2')
+	res.send('2')
+})
+
+
 app.get('/uwu', (req, res) => {
 	sp.write('b')
 	console.log('UwU')

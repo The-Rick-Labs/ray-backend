@@ -42,6 +42,8 @@ void setup() {
   matrix->setTextWrap(false);
   matrix->setTextColor(colors[0]);
   Serial.begin(9600);
+  mouth = 'w';
+  makeOwO1();
 }
 
 int x    = mw;
@@ -54,21 +56,33 @@ void loop() {
       {
         case 'h':
           mouth = 'h';
-          COLOR = green;
           makeDraw(COLOR, mouth);
           break;
         case 's':
-          COLOR = red;
           mouth = 's';
           makeDraw(COLOR,mouth);
           break;
         case 'l':
-          COLOR = blue;
           mouth = 'l';
           makeDraw(COLOR,mouth);
           break;
         case '1':
           makeBlink();
+          break;
+        case '2':
+          //not hungry
+          COLOR = matrix->Color(96, 73, 183);
+          makeDraw(COLOR,mouth);
+          break;
+        case '3':
+          //slightly hungry
+          COLOR = matrix->Color(192, 174, 39);
+          makeDraw(COLOR,mouth);
+          break;
+        case '4':
+          //extremely hungry
+          COLOR = matrix->Color(30,123,30);
+          makeDraw(COLOR,mouth);
           break;
         case 'd':
           mouth = 'w';
